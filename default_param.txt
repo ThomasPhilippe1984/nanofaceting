@@ -1,0 +1,46 @@
+##### System size #####
+MX = 512
+MY = 256
+## Constants
+delta = 0.2
+a = 0.5
+
+##### Simulation precision and length #####
+dx = 0.1
+dt = 0.00001
+## Number of time steps to compute
+nbrTStep = 30000
+## Number of time steps between 2 dumps
+TStepsByDump = 30000
+
+##### Complete model only #####
+## Noise amplitude (enable with 1.0, disable noise with 0.0)
+noise = 0.0
+## Driving force for crystallization (enable with 1.0, disable with 0.0)
+deltamu = 1.0
+## Other constants
+omega = 0.0
+alpha = 0.3
+b = 9.
+
+##### Initialization method for the complete model #####
+#   1 : Planar front, noisy and smooth with tanh
+#   2 : Planar front, noisy but abrupt
+#   3 : Spherical interface
+Init = 1
+
+##### Model type, simple or complete #####
+#   1 : Simple model
+#   2 : Complete model
+Model = 2
+
+##### Ressource to use, CPU, CPU with multithread, GPU #####
+#   1 : Use CPU only, one core at a time
+#   2 : Use CPU only, multiple cores at the same time
+#   3 : Use GPU mostly
+Ressource = 3
+
+##### Precision type (mostly for GPU) #####
+#   1 : Simple precision (float)
+#   2 : Double precision
+Precision = 1
